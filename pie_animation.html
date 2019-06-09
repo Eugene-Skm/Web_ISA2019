@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pie animation</title>
+
+<script language="javascript">
+imageNo=0;
+function show(){
+	if(imageNo==0)
+		document.picture1.src="img/pie1.gif"
+	if(imageNo==1)
+		document.picture1.src="img/pie2.gif"
+	if(imageNo==2)
+		document.picture1.src="img/pie3.gif"
+	if(imageNo==3)
+		document.picture1.src="img/pie4.gif"
+	if(imageNo==4)
+		document.picture1.src="img/pie0.gif"
+	if(imageNo==5)
+		imageNo=0;
+	
+	imageNo++;
+	timeoutID=setTimeout("show()",1000);
+}
+</script>
+</head>
+
+<body bgcolor=#d2f35d text=#0284f95 onLoad="show()">
+<h1>S/Yのページ</h1>
+<h2>Pie アニメーションの手ほどき</h2>
+ <h3>
+    <a href="index.html">トップページ</a>
+    <a href="No_2.html">Webサイトリンク</a>
+    <a href="No_3.html">写真集</a>
+    <a href="No_4.html">日記</a>
+    <a href="No_5.html">Page5</a><br>
+    <a href="timetable.html">時間割(Table Tag)</a>
+    <a href="stationtimetable.html">駅時刻表</a>
+    <a href="pie_animation.html">Pie Animation</a>
+    </h3>
+<hr>
+<center><font size=5>Animation</font><center><p>
+<img srx="pie0.gif" name="picture1">
+<hr>
+</body>
+</html>

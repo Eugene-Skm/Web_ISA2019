@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script language="javascript">
+
+function makeArray(n){
+	this.length=n
+	for(var i=1; i<=n;i++)
+	this[i]=0
+	return this
+}
+jikoku= new makeArray(25)
+jikoku[6]="6: 33"
+jikoku[7]="7:20,50"
+jikoku[8]="8:03,47"
+jikoku[9]="9:53"
+jikoku[10]="10:35"
+jikoku[11]="11:21"
+jikoku[12]="なし"
+jikoku[13]="13:33"
+jikoku[14]="14:06"
+jikoku[15]="15:19"
+jikoku[16]="16:02,51"
+jikoku[17]="17:25"
+jikoku[18]="18:05"
+jikoku[19]="19:58"
+jikoku[20]="20:49"
+jikoku[21]="21:30"
+jikoku[22]="22:17"
+jikoku[23]="なし"
+jikoku[24]="なし"
+
+function renewal()
+{
+document.nittaidai.elements[0].value="";
+document.nittaidai.elements[1].value="";
+}
+
+function jikantest(i)
+{
+document.nittaidai.elements[0].value=jikoku[i];
+document.nittaidai.elements[1].value=jikoku[i+1];
+}
+
+function xtime(){
+today =new Date();
+h=today.getHours();
+if(h<10)h="0"+h;
+m=today.getMinutes();
+if(m<10)m="0"+m;
+s=today.getSeconds()
+if(s<10)s="0"+s;
+document.xclock.elements[0].value=h+":"+m+":"+s;
+
+timeoutID=setTimeout("xtime()",1000);
+}
+</script>
+
+</head>
+<body bgcolor=#5DAC81 text=#0284f95 onload="xtime()">
+<h1>S/Yのページ</h1>
+<h2>～駅の時刻表～</h2>
+ <h3>
+    <a href="index.html">トップページ</a>
+    <a href="No_2.html">Webサイトリンク</a>
+    <a href="No_3.html">写真集</a>
+    <a href="No_4.html">日記</a>
+    <a href="No_5.html">Page5</a><br>
+    <a href="timetable.html">時間割(Table Tag)</a>
+    <a href="stationtimetable.html">駅時刻表</a>
+    <a href="pie_animation.html">Pie Animation</a>
+    </h3>
+    <hr color="#000000">
+<center><h1>青葉台乗り場10</h1></center>
+<center><font size=5>日体大行　（松風台経由）</font></center><p>
+
+<form name="xclock">
+<blink><center>ただ今の時刻は</blink><input type="text" name="xname" id="xvv" value="" size="8">です。</center>
+</form>
+
+<hr>
+<center>
+<center>平日についての時刻表です。下のボタンを押してください。</center>
+<form name="nittaidai">
+<table border="3" align ="center" hspace=100>
+<tr>
+<td>発車時刻/先発</td>
+<td><center><input type="text" name="name"value=""size=15></center></td>
+</tr>
+<tr>
+<td>発車時刻/先発</td>
+<td><center><input type="text" name="name"value=""size=15></center></td>
+</tr>
+</table>
+<table border=1 align="center" hspase="20" vspace=20>
+<tr>
+<td><input type ="button" value=" 6時～" onclick="jikantest(6)"></td>
+<td><input type ="button" value=" 7時～" onclick="jikantest(7)"></td>
+<td><input type ="button" value=" 8時～" onclick="jikantest(8)"></td>
+<td><input type ="button" value=" 9時～" onclick="jikantest(9)"></td>
+<td><input type ="button" value="10時～" onclick="jikantest(10)"></td>
+<td><input type ="button" value="11時～" onclick="jikantest(11)"></td>
+</tr>
+<tr>
+<td><input type ="button" value="12時～" onclick="jikantest(12)"></td>
+<td><input type ="button" value="13時～" onclick="jikantest(13)"></td>
+<td><input type ="button" value="14時～" onclick="jikantest(14)"></td>
+<td><input type ="button" value="15時～" onclick="jikantest(15)"></td>
+<td><input type ="button" value="16時～" onclick="jikantest(16)"></td>
+<td><input type ="button" value="17時～" onclick="jikantest(17)"></td>
+</tr>
+<tr>
+<td><input type ="button" value="18時～" onclick="jikantest(18)"></td>
+<td><input type ="button" value="19時～" onclick="jikantest(19)"></td>
+<td><input type ="button" value="20時～" onclick="jikantest(20)"></td>
+<td><input type ="button" value="21時～" onclick="jikantest(21)"></td>
+<td><input type ="button" value="22時～" onclick="jikantest(22)"></td>
+<td><input type ="button" value="23時～" onclick="jikantest(23)"></td>
+</tr>
+</table>
+</form>
+
+</center>
+</body>
+</html>
